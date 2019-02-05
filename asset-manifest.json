@@ -1,0 +1,16 @@
+{
+  "main.css": "/authors-catalog/static/css/main.8e183bbd.chunk.css",
+  "main.js": "/authors-catalog/static/js/main.c0c46bb2.chunk.js",
+  "main.js.map": "/authors-catalog/static/js/main.c0c46bb2.chunk.js.map",
+  "static/js/1.65336bbd.chunk.js": "/authors-catalog/static/js/1.65336bbd.chunk.js",
+  "static/js/1.65336bbd.chunk.js.map": "/authors-catalog/static/js/1.65336bbd.chunk.js.map",
+  "runtime~main.js": "/authors-catalog/static/js/runtime~main.5900dc32.js",
+  "runtime~main.js.map": "/authors-catalog/static/js/runtime~main.5900dc32.js.map",
+  "static/media/1st.svg": "/authors-catalog/static/media/1st.86c17a70.svg",
+  "static/media/2nd.svg": "/authors-catalog/static/media/2nd.74629788.svg",
+  "static/media/3rd.svg": "/authors-catalog/static/media/3rd.98642d3c.svg",
+  "static/css/main.8e183bbd.chunk.css.map": "/authors-catalog/static/css/main.8e183bbd.chunk.css.map",
+  "index.html": "/authors-catalog/index.html",
+  "precache-manifest.84349d33d8ec55cc1f3407dc125bd325.js": "/authors-catalog/precache-manifest.84349d33d8ec55cc1f3407dc125bd325.js",
+  "service-worker.js": "/authors-catalog/service-worker.js"
+}
