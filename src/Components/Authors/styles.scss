@@ -1,0 +1,224 @@
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(to bottom, #122C3F, #275E87);
+
+  .sort {
+    @include flex(row, center, center, nowrap);
+    margin-bottom: 10px;
+    &__ {
+      &label {
+        color: $white;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      &select {
+        border: none;
+        background: none;
+        font-weight: 700;
+        color: $white;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:focus,
+        &active {
+          outline: none;
+        }
+
+        option {
+          color: $text;
+        }
+      }
+    }
+  }
+
+  .authors {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: $white;
+
+    &__ {
+      &search {
+        height: 60px;
+        background: $darker-grey;
+        border-radius: 5px 5px 0 0;
+
+        &-- {
+          &btn {
+            width: 30px;
+            height: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            img {
+              width: 100%;
+            }
+
+            &:focus,
+            &:active {
+              outline: none;
+            }
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.1);
+            }
+          }
+
+          &input {
+            flex-grow: 1;
+            height: 100%;
+            border: none;
+            background: none;
+            padding-left: 5px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      &list {
+        border-radius: 0 0 5px 5px;
+
+        &-- {
+          &item {
+            @include flex(row, flex-start, center, nowrap);
+            height: 50px;
+
+            &:nth-child(2n) {
+              background: $lighter-grey;
+            }
+
+            &:not(:last-child) {
+              border-bottom: 1px solid $darker-grey;
+            }
+
+            &:last-child {
+              border-radius: 0 0 5px 5px;
+            }
+          }
+        }
+
+        .author {
+          @include flex(row, flex-start, center, nowrap);
+          position: relative;
+          padding-left: 28px;
+          padding-right: 20px;
+
+          @for $i from 1 through 10 {
+            &:nth-child(#{$i}) {
+              .author__avatar {
+                background: nth($avatar-colors, random(length($avatar-colors)));
+              }
+            }
+          }
+
+          &__ {
+            &place {
+              position: absolute;
+              left: 8px;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: 12px;
+              color: $text-secondary;
+              margin: 0;
+            }
+
+            &avatar {
+              @include square(30px);
+              margin-right: 10px;
+              border-radius: 50%;
+              font-size: 14px;
+              color: $white;
+              line-height: 30px;
+              text-align: center;
+              box-shadow: 0 0 20px -2px black;
+            }
+
+            &title {
+              @include flex(column, center, flex-start, nowrap);
+              min-width: 25%;
+
+              &-- {
+                &name {
+                  margin: 0;
+                  color: $text;
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+
+                &publications {
+                  margin: 0;
+                  font-size: 12px;
+                  color: $text-secondary;
+                }
+              }
+            }
+
+            &medal {
+              @include flex(row, center, center, nowrap);
+              height: 100%;
+              flex-grow: 1;
+
+              img {
+                height: 80%;
+              }
+            }
+
+            &views {
+              color: $text;
+              font-size: 15px;
+              font-weight: 700;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    @include flex (row, center, center, nowrap);
+
+    &__ {
+      &shown-elements {
+        color: $white;
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+
+      &prev-btn,
+      &next-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        &:focus,
+        &:active {
+          outline: none
+        }
+
+        &:hover {
+          svg {
+            stroke: $white;
+          }
+        }
+
+        svg {
+          stroke: rgba($white, 0.6);
+          stroke-width: 2px;
+        }
+      }
+
+      &prev-btn > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

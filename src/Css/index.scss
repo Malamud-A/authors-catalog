@@ -1,0 +1,12 @@
+// SCSS utilities
+@import "mixins";
+@import "reset";
+@import "variables";
+
+// GlOBAL STYLES
+body {
+  font-family: "Arial", sans-serif;
+}
+
+// LOCAL STYLES
+@import "../Components/Authors/styles";
